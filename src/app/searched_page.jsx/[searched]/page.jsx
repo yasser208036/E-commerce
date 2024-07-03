@@ -10,7 +10,6 @@ async function getData(search) {
 }
 export default async function page({ params }) {
   const { products } = await getData(params.searched);
-  // console.log(params.searched);
   return (
     <div className="bg-slate-200">
       <div className="container pt-8">
