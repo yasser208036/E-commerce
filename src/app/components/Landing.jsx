@@ -1,4 +1,4 @@
-import Landing_image from "../elements/landing_image";
+import Landing_image from "../elements/Landing_image";
 export default function Landing() {
   return (
     <div className="curved">
