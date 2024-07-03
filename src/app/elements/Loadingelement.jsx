@@ -4,7 +4,7 @@ import loandingAnimation from "../../../public/animation/loading.json";
 
 export default function Loadingelement() {
   return (
-    <div className="flex justify-center items-center">
+    <div className="h-[calc(100vh-128px)] flex justify-center items-center">
       <Lottie className="w-60 h-60" animationData={loandingAnimation} />
     </div>
   );
