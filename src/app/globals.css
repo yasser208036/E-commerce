@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  height: 100vh;
+}
+.landing-container {
+  height: calc(100vh - 80px);
+}
+.cat::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(0 36%, 4% 68%, 4% 36%);
+  background-color: #374151;
+}
+@media (width>767px) {
+  .curved {
+    position: relative;
+    background: white;
+    height: calc(100vh - 80px);
+    border-bottom-left-radius: 50% 30%;
+    border-bottom-right-radius: 50% 30%;
+  }
+}
+@media (preferes-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+  cursor: pointer;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
