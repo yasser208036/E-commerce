@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
       >
         <Nav />
         <Categories_list />
-        {children}
+        <div className="h-[calc(100vh-128px)]">{children}</div>
         <Footer />
       </body>
     </html>
