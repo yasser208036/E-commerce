@@ -24,11 +24,11 @@ export default async function page({ params }) {
     ).toFixed(2);
   };
   return (
-    <div className="container lg:w-[80%] p-2 md:my-5 min-h-[70vh]  flex flex-col md:flex-row items-center gap-2 bg-white">
+    <div className="container lg:w-[80%] p-2 md:my-1 md:h-[calc(100vh-136px)] flex flex-col md:flex-row items-center gap-2 bg-white">
       <div className="h-full w-[50%]">
         <Custom_slider images={product.images} />
       </div>
-      <div className="flex flex-col items-center text-sm lg:text-lg text-center md:w-[50%] p-2 space-y-3 h-full">
+      <div className="flex flex-col items-center justify-center text-sm lg:text-lg text-center md:w-[50%] p-2 space-y-3 h-full">
         <h1 className="font-medium">{product.title}</h1>
         <p className="text-gray-400 leading-5 ">{product.description}</p>
         <div className="flex gap-2">
