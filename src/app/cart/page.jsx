@@ -27,7 +27,7 @@ export default function page() {
   }
   return (
     <div className="container grid grid-cols-4 gap-3 min-h-[calc(100vh-136px)]">
-      <div className="col-span-3 rounded-md bg-white h-fit">
+      <div className="col-span-4 md:col-span-3 rounded-md bg-white h-fit">
         <h2 className="p-3 text-lg font-medium border-b border-gray-100">
           {`Cart (${cartItems.length})`}
         </h2>
@@ -47,14 +47,16 @@ export default function page() {
                         width={72}
                         height={72}
                       />
-                      <p className="max-w-[550px]">{item.description}</p>
+                      <p className="max-w-60 md:max-w-[500px]">
+                        {item.description}
+                      </p>
                     </div>
                     <div className="flex flex-col items-end justify-center gap-1">
                       <p className="text-lg font-medium">{`$ ${item.discountPrice}`}</p>
-                      <p>
-                        <span className="line-through text-gray-400 mr-3">{`$ ${item.price}`}</span>
-                        <span className="text-[#f68b1e] bg-[#fef3e9] p-1 rounded">{`-${item.discountPercentage}`}</span>
-                      </p>
+                      <div className="flex flex-col lg:flex-row">
+                        <p className="line-through text-gray-400 mr-3">{`$ ${item.price}`}</p>
+                        <p className="text-[#f68b1e] bg-[#fef3e9] p-1 rounded">{`-${item.discountPercentage}`}</p>
+                      </div>
                     </div>
                   </div>
                   <div className="flex justify-between mt-3">
@@ -104,9 +106,9 @@ export default function page() {
           </div>
         )}
       </div>
-      <div className="rounded-md bg-white flex flex-col font-medium text-sm h-fit">
+      <div className="rounded-md col-span-4 md:col-span-1 bg-white flex items-center md:flex-col md:items-stretch font-medium text-sm h-fit">
         <h2 className="p-2">CART SUMMARY</h2>
-        <p className="p-2 border-y border-gray-100 flex justify-between items-center">
+        <p className="p-2 md:border-y border-gray-100 flex justify-between items-center">
           Subtotal
           <span className="text-base font-semibold">{`$${totalPrice}`}</span>
         </p>
