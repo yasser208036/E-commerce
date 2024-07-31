@@ -31,6 +31,7 @@ body {
     color-scheme: dark;
   }
 }
+/* scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -45,4 +46,25 @@ body {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+/* spiner */
+.spiner {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #4b5563;
+  border: 9px solid transparent;
+  border-top: 9px solid #1c64f2;
+}
+.spiner:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 71px;
+  height: 71px;
+  border-radius: 50%;
+  background-color: #e2e8f0;
 }

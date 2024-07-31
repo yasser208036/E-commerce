@@ -5,7 +5,7 @@ import loandingAnimation from "../../../public/animation/loading.json";
 export default function Loadingelement() {
   return (
     <div className="h-[calc(100vh-136px)] flex justify-center items-center">
-      <Lottie className="w-60 h-60" animationData={loandingAnimation} />
+      <div className="animate-spin spiner"></div>
     </div>
   );
 }

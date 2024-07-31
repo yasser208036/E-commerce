@@ -5,6 +5,7 @@ import { FaSearch } from "react-icons/fa";
 import { IoCart } from "react-icons/io5";
 import Link from "next/link";
 import { useState } from "react";
+import CartCount from "../elements/CartCount";
 
 export default function Nav() {
   const [search, setSearch] = useState("");
@@ -39,9 +40,13 @@ export default function Nav() {
             <FaSearch className="text-gray-600" />
           </Link>
         </div>
-        <div className="flex items-center justify-center w-10 h-10 rounded-full bg-white cursor-pointer">
-          <IoCart className="text-2xl text-gray-600" />
-        </div>
+        <Link
+          href="/cart"
+          className="flex relative items-center justify-center w-10 h-10 "
+        >
+          <IoCart className="text-2xl text-white" />
+          <CartCount />
+        </Link>
       </div>
     </nav>
   );

@@ -20,7 +20,10 @@ export default function Custom_slider({ images }) {
       </div>
       <div className="flex gap-1">
         {images.map((image, index) => (
-          <div className="cursor-pointer" key={index}>
+          <div
+            className="cursor-pointer w-[150px] h-[150px] overflow-hidden"
+            key={index}
+          >
             <Image
               onClick={() => changeImage(index)}
               src={image}

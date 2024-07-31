@@ -3,6 +3,8 @@ import Nav from "./components/Nav";
 import { Montserrat } from "next/font/google";
 import Categories_list from "./components/Categories_list";
 import Footer from "./components/Fotter";
+import Providers from "./redux/Providers";
+import { Toaster } from "react-hot-toast";
 
 const bodyFont = Montserrat({ subsets: ["latin"] });
 
@@ -20,10 +22,21 @@ export default function RootLayout({ children }) {
       <body
         className={`relative bg-white md:bg-slate-200 ${bodyFont.className}`}
       >
-        <Nav />
-        <Categories_list />
-        <div className="my-1">{children}</div>
-        <Footer />
+        <Providers>
+          <Nav />
+          <Categories_list />
+          <div className="my-1">
+            <Toaster
+              position="top-center"
+              reverseOrder={false}
+              toastOptions={{
+                duration: 1000,
+              }}
+            />
+            {children}
+          </div>
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
