@@ -47,11 +47,9 @@ export default function page() {
                         width={72}
                         height={72}
                       />
-                      <p className="max-w-60 md:max-w-[500px]">
-                        {item.description}
-                      </p>
+                      <p className="max-w-[500px]">{item.description}</p>
                     </div>
-                    <div className="flex flex-col items-end justify-center gap-1">
+                    <div className="flex flex-col items-end justify-center gap-1 min-w-28">
                       <p className="text-lg font-medium">{`$ ${item.discountPrice}`}</p>
                       <div className="flex flex-col lg:flex-row">
                         <p className="line-through text-gray-400 mr-3">{`$ ${item.price}`}</p>
