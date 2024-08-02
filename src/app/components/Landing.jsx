@@ -3,7 +3,7 @@ export default function Landing() {
   return (
     <div className="curved">
       <div className="landing-container flex flex-col-reverse md:flex-row container items-center justify-between">
-        <div className="px-2 mb-10">
+        <div className="px-2 mb-10 text-center md:text-start">
           <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-b from-violet-700 to-blue-600 inline-block text-transparent bg-clip-text mb-3">
             Shop now and enjoy exclusive discounts!
           </h1>
