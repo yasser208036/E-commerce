@@ -27,20 +27,19 @@ export default function Categories_list() {
           <FaArrowRightFromBracket className="w-8 h-8" />
         )}
       </div>
-      <ul className="bg-slate-200 p-2 w-80 h-screen border overflow-y-scroll">
+      <aside className="bg-slate-200 p-2 w-80 h-screen border overflow-y-scroll">
         <h2 className="font-bold mb-3 text-center">ALL CATEGORIES</h2>
         {categories.map((category) => (
           <Link
             onClick={() => setOpen(false)}
             key={category}
             href={`../products-by-category/${category}`}
+            className="block border-b border-gray-400 py-2 hover:translate-x-2 hover:text-white transition-all"
           >
-            <li className="border-b border-gray-400 py-2 hover:translate-x-2 hover:text-white transition-all">
-              {category}
-            </li>
+            {category}
           </Link>
         ))}
-      </ul>
+      </aside>
     </div>
   );
 }
