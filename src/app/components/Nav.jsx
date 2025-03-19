@@ -22,7 +22,7 @@ export default function Nav() {
             src={Logo}
             width={500}
             height={500}
-            alt="Logo"
+            alt="Go to main page"
           />
         </Link>
         <div className="flex items-center flex-1 bg-white rounded-3xl h-12 overflow-hidden">
